@@ -1,0 +1,4 @@
+arg
+===
+
+AMD Require Generator
