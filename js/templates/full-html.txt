@@ -1,0 +1,35 @@
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=7, IE=9, IE=10"&gt;
+    &lt;meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"&gt;
+    &lt;title&gt;&lt;/title&gt;
+    &lt;link rel="stylesheet" href="//js.arcgis.com/3.6/js/esri/css/esri.css"&gt;
+    &lt;style&gt;
+      html, body, #map {
+        height: 100%; width: 100%; margin: 0; padding: 0; 
+      }
+    &lt;/style&gt;
+
+    &lt;script src="//js.arcgis.com/3.6/"&gt;&lt;/script&gt;
+    &lt;script&gt;
+      var map;
+    
+      require([
+${0}
+      ], function(
+${1}
+      ) {
+
+        //
+        // modules available here  
+        //
+
+      });
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id="map"&gt;&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;

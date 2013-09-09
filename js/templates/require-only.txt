@@ -1,0 +1,11 @@
+require([
+${0}
+], function(
+${1}
+) {
+
+  //
+  // modules available here  
+  //
+
+});

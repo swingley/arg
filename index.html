@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>AMD Require Generator | Esri JS API and Dojo</title>
+
+    <!--link rel="stylesheet" href="//jsdev.arcgis.com/3.7/js/dojo/dojo/resources/dojo.css"-->
+    <link rel="stylesheet" href="//jsdev.arcgis.com/3.7/js/dgrid/css/dgrid.css">
+    <link rel="stylesheet" href="//jsdev.arcgis.com/3.7/js/dgrid/css/skins/tundra.css">
+    <link rel="stylesheet" href="//jsdev.arcgis.com/3.7/js/dojo/dijit/themes/tundra/tundra.css">
+    <link rel="stylesheet" href="//jsdev.arcgis.com/3.7/js/esri/css/esri.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+  </head>
+  <body class="tundra">
+    <div id="wrapper">
+      
+      <div id="modules">
+        <div id="search-wrapper">
+          <input type="text" placeholder="module identifier" id="module-filter">
+        </div>
+
+        <div id="esri-list" class="module-list"></div>
+
+        <div id="dojo-list" class="module-list"></div>
+      </div>
+
+      <div id="require">
+        <pre id="output"></pre>
+      </div>
+
+      <div id="settings">change stuff</div>
+      <div id="settingsPane">
+        <div id="settingsContent">
+          <div>Template:</div>
+          <input type="radio" checked=true name="templateType" value="requireOnly" id="requireOnly">
+          <label for="requireOnly">require only</label>
+          
+          <input type="radio" name="templateType" value="fullHtml" id="fullHtml">
+          <label for="fullHtml">full HTML</label>
+
+          <div>Packages:</div>
+          <!--input type="checkbox" checked=true id="esriPackage">
+          <label for="esriPackage">esri</label-->
+          
+          <input type="checkbox" checked=true id="dojoPackage">
+          <label for="dojoPackage">dojo</label>
+          
+          <input type="checkbox" id="dijitPackage">
+          <label for="dijitPackage">dijit</label>
+
+          <input type="checkbox" id="dojoxPackage">
+          <label for="dojoxPackage">dojox</label>
+          
+          <input type="checkbox" id="dgridPackage">
+          <label for="dgridPackage">dgrid</label>
+
+          <div id="settingsClose">Close</div>
+        </div>
+          
+      </div>
+
+    </div>
+
+    <script src="js/dojoConfig.js"></script>
+    <script src="//jsdev.arcgis.com/3.7/"></script>
+    <script src="js/run.js"></script>
+
+  </body>
+</html>

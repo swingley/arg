@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+}
+html, body {
+  color: #4D4D4D;
+  font-family: sans-serif;
+  height: 100%; 
+  margin: 0; 
+  padding: 0; 
+  width: 100%; 
+}
+#modules, #require {
+  bottom: 0;
+  padding: 1em;
+  position: absolute;
+  top: 0;
+}
+.dgrid-cell {
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+.dgrid-cell, .dgrid-cell input {
+  cursor: pointer;
+}
+.tundra .ui-state-default:hover {
+  background: #D7E9FD;
+}
+.tundra .ui-widget-header {
+  background: #fff;
+}
+.tundra .ui-widget-header th:hover {
+  background: #fff;
+}
+
+/* left side */
+#modules {
+  background: #fff;
+  border-right: 1px solid #ccc;
+  left: 0;
+  right: 50%
+}
+#search-wrapper {
+  height: 6%;
+}
+#module-filter {
+  border: 1px solid #ccc;
+  font-size: 1.01em;
+  padding: 0.2em;
+  width: 100%
+}
+#esri-list {
+  margin: 0 0 3% 0;
+}
+.module-list {
+  height: 45.5%;
+}
+
+/* right side */
+#require {
+  left: 50%;
+  overflow-y: scroll;
+  right: 0;
+}
+#output {
+  font-size: 1.2em;
+  margin: 0;
+  word-wrap: break-word;
+}
+
+#settings {
+  background: #666;
+  color: #fff;
+  cursor: pointer;
+  height: 2em;
+  opacity: 0.3;
+  padding: 0.5em 1.5em 0.5em 0.5em;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 1em;
+  width: auto;
+  z-index: 2;
+}
+#settings:hover {
+  opacity: 1;
+}
+#settingsPane {
+  background: #fff;
+  color: #666;
+  display: none;
+  height: 100%;
+  opacity: 0.9;
+  padding: 4em 0 0 0;
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+}
+#settingsContent {
+  box-shadow: 0 8px 6px -6px #999;
+}
+#settingsPane div {
+  background: #666;
+  color: #fff;
+  height: auto;
+  margin: 0 auto;
+  padding: 1em;
+  width: 20em;
+}
+#settingsPane div div {
+  padding: 1em 0 0 0;
+  width: auto;
+}
+#settingsClose {
+  background: #fff;
+  color: #666;
+  cursor: pointer;
+  font-size: 1.4em;
+  height: 2em;
+  padding: 0.5em;
+  text-align: center;
+  width: auto;
+}
