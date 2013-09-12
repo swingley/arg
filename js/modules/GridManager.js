@@ -57,16 +57,18 @@ define([
 
       this.dojoGrid.on("dgrid-select", lang.hitch(this, function(e) {
         // console.log("select", e.rows, this);
-        if ( e.rows.length > 1 ) {
-          console.log("selected more than one row at once...how?", e.rows);
-        }
-        // var rows = e.rows;
-        var module = this.getModule(e.rows[0].id, this.dojoGrid);
-        var moduleIdx = arrayUtils.indexOf(this.dojoSelection, module);
-        if ( moduleIdx === -1 ) {
-          this.dojoSelection.push(module);
+        var previousSelectionCount = this.dojoSelection.length;
+        arrayUtils.forEach(e.rows, function(row) {
+          var module = this.getModule(row.id, this.dojoGrid);
+          var moduleIdx = arrayUtils.indexOf(this.dojoSelection, module);
+          if ( moduleIdx === -1 ) {
+            this.dojoSelection.push(module);
+          }
+        }, this);
+        var currentSelectionCount = this.dojoSelection.length;
+        if ( previousSelectionCount !== currentSelectionCount ) {
           this.emit("change");
-        } 
+        }
       }));
 
       this.dojoGrid.on("dgrid-deselect", lang.hitch(this, function(e){
@@ -99,16 +101,18 @@ define([
 
       this.esriGrid.on("dgrid-select", lang.hitch(this, function(e) {
         // console.log("select", e.rows, esriGrid.selection);
-        if ( e.rows.length > 1 ) {
-          console.log("selected more than one row at once...how?", e.rows);
-        }
-        // var rows = e.rows;
-        var module = this.getModule(e.rows[0].id, this.esriGrid);
-        var moduleIdx = arrayUtils.indexOf(this.esriSelection, module);
-        if ( moduleIdx === -1 ) {
-          this.esriSelection.push(module);
+        var previousSelectionCount = this.esriSelection.length;
+        arrayUtils.forEach(e.rows, function(row) {
+          var module = this.getModule(row.id, this.esriGrid);
+          var moduleIdx = arrayUtils.indexOf(this.esriSelection, module);
+          if ( moduleIdx === -1 ) {
+            this.esriSelection.push(module);
+          }
+        }, this);
+        var currentSelectionCount = this.esriSelection.length;
+        if ( previousSelectionCount !== currentSelectionCount ) {
           this.emit("change");
-        } 
+        }
       }));
 
       this.esriGrid.on("dgrid-deselect", lang.hitch(this, function(e){
