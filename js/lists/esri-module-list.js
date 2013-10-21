@@ -414,7 +414,7 @@ return [
   }, 
   {
     "alias": "Layer", 
-    "id": "esri/layers/Layer"
+    "id": "esri/layers/layer"
   }, 
   {
     "alias": "LayerDataSource", 
