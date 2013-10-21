@@ -29,7 +29,7 @@ define([
       }
 
       if ( formattedEsriMids && formattedDojoMids ) {
-        combined = formattedEsriMids + "\n" + formattedDojoMids;
+        combined = formattedEsriMids + ",\n" + formattedDojoMids;
       } else {
         combined = formattedEsriMids || formattedDojoMids;
       }
