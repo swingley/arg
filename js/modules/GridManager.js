@@ -100,7 +100,7 @@ define([
       this.esriGrid.startup();
 
       this.esriGrid.on("dgrid-select", lang.hitch(this, function(e) {
-        // console.log("select", e.rows, esriGrid.selection);
+        // console.log("select", e.rows, this.esriGrid.selection);
         var previousSelectionCount = this.esriSelection.length;
         arrayUtils.forEach(e.rows, function(row) {
           var module = this.getModule(row.id, this.esriGrid);
