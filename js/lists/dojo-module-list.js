@@ -43,7 +43,11 @@ return [
   {
     "alias": "DeferredList", 
     "id": "dojo/DeferredList"
-  }, 
+  },
+  {
+      "alias": "dnd",
+      "id": "dojo/dnd/Moveable"
+  },
   {
     "alias": "domAttr", 
     "id": "dojo/dom-attr"

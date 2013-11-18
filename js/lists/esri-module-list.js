@@ -107,7 +107,11 @@ return [
   {
     "alias": "BasemapGallery", 
     "id": "esri/dijit/BasemapGallery"
-  }, 
+  },
+  {
+    "alias": "BasemapLayer",
+    "id": "esri/dijit/BasemapLayer"
+  },
   {
     "alias": "Basemap", 
     "id": "esri/dijit/Basemap"
