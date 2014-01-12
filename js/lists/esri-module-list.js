@@ -261,6 +261,10 @@ return [
     "id": "esri/dijit/editing/TemplatePicker"
   }, 
   {
+    "alias": "Circle", 
+    "id": "esri/geometry/Circle"
+  }, 
+  {
     "alias": "Extent", 
     "id": "esri/geometry/Extent"
   }, 
