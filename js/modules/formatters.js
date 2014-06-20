@@ -24,6 +24,13 @@ define([
       }
 
       if ( d.length ) {
+        // always put domReady at the end
+        for ( var i = 0, il = d.length; i < il; i++ ) {
+          if ( d[i].id === "dojo/domReady!" ) {
+            d.push(d.splice(i, 1)[0]);
+            break;
+          }
+        }
         formattedDojoMids = arrayUtils.map(d, this.formatModule, this);
         formattedDojoMids = this.formatArray(formattedDojoMids);
       }
@@ -40,6 +47,8 @@ define([
     aliases: function(e, d, pad) {
       this.pad = pad;
       var combined = "", formattedEsriAliases, formattedDojoAliases;
+      // used to strip domReady alias from callback args
+      var domReady = ",\n" + this.pad + "domReady";
 
       if ( !e.length && !d.length ) {
         return combined;
@@ -53,6 +62,7 @@ define([
       if ( d.length ) {
         formattedDojoAliases = arrayUtils.map(d, this.formatAlias, this);
         formattedDojoAliases = this.formatArray(formattedDojoAliases);
+        formattedDojoAliases = formattedDojoAliases.replace(domReady, "");
       }
 
       if ( formattedEsriAliases && formattedDojoAliases ) {

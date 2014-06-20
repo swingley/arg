@@ -36,13 +36,13 @@ require([
   var templates = {
     fullHtml: {
       content: fullHtml,
-      pad: "        ",
+      pad: "        "
     },
     requireOnly: {
       content: requireOnly,
       pad: "  "
     }
-  }
+  };
   var config = new Stateful();
   config.set("templates", templates);
   config.watch("current", updateTemplate);

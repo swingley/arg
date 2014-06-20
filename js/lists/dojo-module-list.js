@@ -78,7 +78,7 @@ return [
   }, 
   {
     "alias": "domReady", 
-    "id": "dojo/domReady"
+    "id": "dojo/domReady!"
   }, 
   {
     "alias": "Evented", 
