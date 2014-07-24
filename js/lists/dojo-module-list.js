@@ -249,7 +249,7 @@ return [
     "id": "dojo/window"
   }, 
   {
-    "alias": "arrayUtils", 
+    "alias": "arrayUtil", 
     "id": "dojo/_base/array"
   }, 
   {
